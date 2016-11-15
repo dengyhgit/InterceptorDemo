@@ -8,6 +8,7 @@
 
 #import "FirstViewController.h"
 #import "OtherViewController.h"
+#import "UIViewController+Addition.h"
 
 @interface FirstViewController ()
 
@@ -30,6 +31,7 @@
 
 - (IBAction)OtherView:(id)sender {
     OtherViewController *vc = [[OtherViewController alloc] init];
+    vc.disabledInterceptor = YES;
     [self.navigationController pushViewController:vc animated:YES];
 }
 

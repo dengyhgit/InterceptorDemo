@@ -10,6 +10,7 @@
 #import <objc/runtime.h>
 
 #define KeyIsInitTheme @"KeyIsInitTheme"
+#define KeyDisabledInterceptor @"KeyDisabledInterceptor"
 
 @implementation UIViewController (Addition)
 
@@ -21,5 +22,14 @@
 - (void)setIsInitTheme:(BOOL)isInitTheme {
     objc_setAssociatedObject(self, KeyIsInitTheme, @(isInitTheme), OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
+
+- (BOOL)disabledInterceptor {
+    return objc_getAssociatedObject(self, KeyDisabledInterceptor);
+}
+
+- (void)setDisabledInterceptor:(BOOL)disabledInterceptor {
+    objc_setAssociatedObject(self, KeyDisabledInterceptor, @(disabledInterceptor), OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+}
+                    
 
 @end

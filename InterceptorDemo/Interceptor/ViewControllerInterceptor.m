@@ -34,7 +34,10 @@
          // 使用 Aspects 进行方法的拦截
          // AspectOptions 三种方式选择：在原本方法前执行、在原本方法后执行、替换原本方法
         [UIViewController aspect_hookSelector:@selector(viewWillAppear:) withOptions:AspectPositionAfter usingBlock:^(id<AspectInfo> aspectInfo, BOOL animated){
-            [self viewWillAppear:animated viewController:[aspectInfo instance]];
+            UIViewController * vc = [aspectInfo instance];
+            if (!vc.disabledInterceptor) {
+                [self viewWillAppear:animated viewController:vc];
+            }
         } error:NULL];
     }
     return self;

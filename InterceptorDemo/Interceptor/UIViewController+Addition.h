@@ -10,6 +10,8 @@
 
 @interface UIViewController (Addition)
 
+// 拦截器是否有效
+@property(nonatomic, assign) BOOL disabledInterceptor;
 @property(nonatomic, assign) BOOL isInitTheme;
 
 @end
