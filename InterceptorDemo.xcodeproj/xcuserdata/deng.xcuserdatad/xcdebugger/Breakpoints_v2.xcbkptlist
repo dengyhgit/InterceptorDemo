@@ -41,13 +41,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "InterceptorDemo/FirstViewController.m"
-            timestampString = "500893770.206469"
+            filePath = "InterceptorDemo/Interceptor/ViewControllerInterceptor.m"
+            timestampString = "501326508.629133"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "28"
-            endingLineNumber = "28"
-            landmarkName = "-viewWillAppear:"
+            startingLineNumber = "39"
+            endingLineNumber = "39"
+            landmarkName = "-init"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -58,12 +58,28 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "InterceptorDemo/Interceptor/ViewControllerInterceptor.m"
-            timestampString = "500893706.127297"
+            timestampString = "501326508.629133"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "51"
-            endingLineNumber = "51"
-            landmarkName = "-viewWillAppear:viewController:"
+            startingLineNumber = "40"
+            endingLineNumber = "40"
+            landmarkName = "-init"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "InterceptorDemo/Interceptor/UIViewController+Addition.m"
+            timestampString = "501326508.629133"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "33"
+            endingLineNumber = "33"
+            landmarkName = "-setDisabledInterceptor:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

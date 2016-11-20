@@ -28,7 +28,12 @@
 }
 
 - (void)setDisabledInterceptor:(BOOL)disabledInterceptor {
-    objc_setAssociatedObject(self, KeyDisabledInterceptor, @(disabledInterceptor), OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+    NSNumber *integer = @(disabledInterceptor);
+    if (integer.intValue == 0) {
+        objc_setAssociatedObject(self, KeyDisabledInterceptor, nil, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+    } else {
+        objc_setAssociatedObject(self, KeyDisabledInterceptor, integer, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+    }
 }
                     
 
